@@ -91,7 +91,8 @@ SELECT
 FROM
     VEICULO;
 
--- Consulta para visualizar os quilômetros rodados em uma locação (valor não nulo)
+-- Consulta para visualizar os quilômetros rodados em uma locação (valor não nulo).
+-- Este será preenchido com a diferença da quilometragem da retirada do veículo com a devolução.
 SELECT
     VEICULO.nome AS NomeDoVeiculo,
     LOCACAO.km_rodados AS QuilometrosRodados
