@@ -56,7 +56,7 @@ Extras:
 
 ## TABELAS
 
-### Tabela LOCACAO:
+### 📝Tabela LOCACAO:
 
 Configura um pedido de locação de um automóvel por um cliente.  
 
@@ -78,7 +78,7 @@ A coluna para os quilômetros rodados poderá receber NULL, para que se armazene
 * 1:N com a tabela VEICULO - Um veículo pode ser locado várias vezes e uma locação pode registrar um único veículo.
 * 1:N com a tabela UNIDADE - Uma unidade pode ser registrada em vários pedidos de locação e uma locação só registra uma única unidade.
 
-### Tabela UNIDADE:
+### 🏪Tabela UNIDADE:
 
 Representa todos os estabelecimentos físicos da empresa Carloca. É o local onde os clientes podem alugar, fazer a retirada e a devolução dos veículos. As devoluções podem ser realizadas em unidades diferentes da empresa.  
 
@@ -92,7 +92,7 @@ Cada linha desta tabela representa uma unidade e recebe:
 * 1:1 com a tabela ENDERECO - Uma unidade pode ter apenas um endereço e um endereço pertence a somente uma unidade.
 * 1:N com a tabela VEICULO - Uma unidade pode pertencer a vários veículos e um veículo só pode estar estacionado em uma unidade.
     
-### Tabela CLIENTE:
+### 🙋Tabela CLIENTE:
 
 É a representação dos dados de todos os clientes da empresa.  
 
@@ -111,7 +111,7 @@ Os dados dos clientes devem ser cadastrados com:
 * 1:N com a tabela CLIENTE_ENDERECO - Tabela para armazenar a relação N:N de CLIENTE com ENDERECO, onde um cliente pode ter vários endereços e um endereço pode pertencer a vários clientes (motivo da relação explicada na Tabela CLIENTE_ENDERECO).
 
 
-### Tabela ENDERECO
+### 🗺️Tabela ENDERECO
 
 Guarda as informações dos endereços dos clientes e das unidades.  
 
@@ -132,7 +132,7 @@ Supondo que muitos dos clientes do Carloca podem ser turistas estrangeiros e com
 * 1:1 com a tabela UNIDADE - Uma unidade pode ter apenas um endereço e um endereço pertence a somente uma unidade.
 * 1:N com a tabela CLIENTE_ENDERECO - Tabela para armazenar a relação N:N de CLIENTE com ENDERECO, onde um cliente pode ter vários endereços e um endereço pode pertencer a vários clientes (motivo da relação explicada na Tabela CLIENTE_ENDERECO).
 
-### Tabela CLIENTE_ENDERECO
+### 🙋🗺️Tabela CLIENTE_ENDERECO
 
 Tabela intermediária para sanar a cardialidade entre as tabelas CLIENTE e ENDEREÇO.  
 Diante do exposto na tabela anterior (ENDERECO) sobre turistas estrangeiros em estadia temporária em hoteis, e observando que uma unidade do Carloca pode estar situada em uma região fronteiriça com outros países, compreende-se que há a cardialidade de N:N (Muitos para Muitos) entre as tabelas CLIENTE e ENDEREÇO, uma vez que vários clientes podem se hospedar no mesmo quarto de hotel.  
@@ -145,7 +145,7 @@ Recebendo assim:
 * 1:N com a tabela ENDERECO - Armazena a relação N:N de CLIENTE com ENDERECO.
 * 1:N com a tabela CLIENTE - Armazena a relação N:N de CLIENTE com ENDERECO.
 
-### Tabela VEICULO
+### 🚗Tabela VEICULO
 
 Consta os dados de cada veículo que a locadora tem disponível.  
 
@@ -169,7 +169,7 @@ Cadastra-se nele:
 * 1:N com a tabela CATEGORIA_VEICULO - Um veículo pertence a uma categoria e uma categoria engloba diversos veículos.
 * 1:N com a tabela UNIDADE - Uma unidade pode pertencer a vários veículos e um veículo só pode estar estacionado em uma unidade.
 
-### Tabela MODELO_VEICULO
+### 📆🚗Tabela MODELO_VEICULO
 
 Armazena as informações de modelo do veículo.  
 Geralmente o modelo do veículo acompanha seu ano de fabricação, como por exemplo "2018/2019", sendo o primeiro, o ano da fabricação e o último, o ano do modelo.  
@@ -182,7 +182,7 @@ Armazenando:
 #### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela VEICULO - Um veículo tem apenas um modelo e o modelo pode pertencer a vários veículos.
 
-### Tabela MONTADORA_VEICULO
+### 🏭🚗Tabela MONTADORA_VEICULO
 
 Guarda qual a fabricante do veículo.  
 Exemplos: Toyota, Ford, Chevrolet.
@@ -194,7 +194,7 @@ Recebendo:
 #### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela VEICULO - Um veículo tem apenas uma montadora e a montadora pode produzir vários veículos diferentes.
 
-### Tabela VERSAO_VEICULO
+### 🚗💨Tabela VERSAO_VEICULO
 
 Responsável pela versão do veículo.  
 Exemplos: Civic LX, Corolla XEi, Fiesta SE.
@@ -206,7 +206,7 @@ Portando:
 #### <font color="green">Relacionamentos Cardinais:</font>
 1:N com a tabela VEICULO - Um veículo tem apenas uma versão e uma mesma versão pode pertencer a outros veículos.
 
-### Tabela CATEGORIA_VEICULO
+### 🛻🚗Tabela CATEGORIA_VEICULO
 
 Responsável pela categoria do veículo.  
 Exemplos: Sedan, Caminhonete, SUV
