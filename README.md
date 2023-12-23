@@ -41,9 +41,9 @@ Extras:
     1.1 Modelo  
     1.2 Montadora  
     1.3 Cor:  
-    1.3.1 Branco  
-    1.3.2 Preto  
-    1.3.3 Prata  
+        - 1.3.1 Branco  
+        - 1.3.2 Preto  
+        - 1.3.3 Prata  
     1.4 Versão  
     1.5 Categoria
 2. Um cliente pode alugar um carro somente na modalidade "diária"
@@ -73,7 +73,7 @@ Nele, consta:
 A coluna da Unidade de devolução do veículo poderá receber NULL, assim, se a o campo estiver NULL, é porque o veiculo ainda não foi devolvido. (R4)
 A coluna para os quilômetros rodados poderá receber NULL, para que se armazene o cálculo da diferença da quilometragem após a locação. (R6)
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela CLIENTE - Um cliente pode realizar um pedido de locação varias vezes e uma locação pode registrar um único cliente.
 * 1:N com a tabela VEICULO - Um veículo pode ser locado várias vezes e uma locação pode registrar um único veículo.
 * 1:N com a tabela UNIDADE - Uma unidade pode ser registrada em vários pedidos de locação e uma locação só registra uma única unidade.
@@ -87,7 +87,7 @@ Cada linha desta tabela representa uma unidade e recebe:
 * Nome
 * Endereço
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela LOCACAO - Uma unidade pode ser registrada em vários pedidos de locação e uma locação só registra uma única unidade.
 * 1:1 com a tabela ENDERECO - Uma unidade pode ter apenas um endereço e um endereço pertence a somente uma unidade.
 * 1:N com a tabela VEICULO - Uma unidade pode pertencer a vários veículos e um veículo só pode estar estacionado em uma unidade.
@@ -106,7 +106,7 @@ Os dados dos clientes devem ser cadastrados com:
 * validade da habilitação
 * categoria da habilitação - dependendo do veículo a ser locado, o motorista deverá ser devidamente habilitado
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela LOCACAO - Um cliente pode realizar vários pedidos de aluguel e uma locação pertence apenas a um cliente.
 * 1:N com a tabela CLIENTE_ENDERECO - Tabela para armazenar a relação N:N de CLIENTE com ENDERECO, onde um cliente pode ter vários endereços e um endereço pode pertencer a vários clientes (motivo da relação explicada na Tabela CLIENTE_ENDERECO).
 
@@ -128,7 +128,7 @@ As informações são:
 
 Supondo que muitos dos clientes do Carloca podem ser turistas estrangeiros e como não foi definida a regra de negócio se o endereço a ser cadastrado deve ser o atual, mesmo que temporário(Hoteis, por exemplo) ou residêncial, foi incluído a coluna país.
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:1 com a tabela UNIDADE - Uma unidade pode ter apenas um endereço e um endereço pertence a somente uma unidade.
 * 1:N com a tabela CLIENTE_ENDERECO - Tabela para armazenar a relação N:N de CLIENTE com ENDERECO, onde um cliente pode ter vários endereços e um endereço pode pertencer a vários clientes (motivo da relação explicada na Tabela CLIENTE_ENDERECO).
 
@@ -141,7 +141,7 @@ Recebendo assim:
 * Identificador do cliente
 * Identificador do endereço
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela ENDERECO - Armazena a relação N:N de CLIENTE com ENDERECO.
 * 1:N com a tabela CLIENTE - Armazena a relação N:N de CLIENTE com ENDERECO.
 
@@ -162,7 +162,7 @@ Cadastra-se nele:
 * Categoria (R1.5)
 * Unidade do Carloca em que o veículo está ou esteve estacionado a última vez
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela MODELO_VEICULO - Um veículo tem apenas um modelo e o modelo pode pertencer a vários veículos.
 * 1:N com a tabela MONTADORA_VEICULO - Um veículo tem apenas uma montadora e a montadora pode produzir vários veículos diferentes.
 * 1:N com a tabela VERSAO_VEICULO - Um veículo tem apenas uma versão e uma mesma versão pode pertencer a outros veículos.
@@ -179,7 +179,7 @@ Armazenando:
 * Ano de fabricação
 * Ano do modelo
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela VEICULO - Um veículo tem apenas um modelo e o modelo pode pertencer a vários veículos.
 
 ### Tabela MONTADORA_VEICULO
@@ -191,7 +191,7 @@ Recebendo:
 * Identificado
 * Nome da montadora
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela VEICULO - Um veículo tem apenas uma montadora e a montadora pode produzir vários veículos diferentes.
 
 ### Tabela VERSAO_VEICULO
@@ -203,7 +203,7 @@ Portando:
 * Identificado
 * Nome da versão
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 1:N com a tabela VEICULO - Um veículo tem apenas uma versão e uma mesma versão pode pertencer a outros veículos.
 
 ### Tabela CATEGORIA_VEICULO
@@ -215,5 +215,5 @@ Portando:
 * Identificado
 * Nome da versão
 
-#### Relacionamentos Cardinais:
+#### <font color="green">Relacionamentos Cardinais:</font>
 * 1:N com a tabela VEICULO - Um veículo pertence a uma categoria e uma categoria engloba diversos veículos.
