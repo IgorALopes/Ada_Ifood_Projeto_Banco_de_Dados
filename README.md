@@ -31,7 +31,7 @@ Extras:
 * README descritivo
 
 #### Leganda para cardinalidade:
-* 1:1 - Um-para-UM
+* 1:1 - Um-para-Um
 * 1:N - Um-para-Muitos
 * N:N - Muitos-para-Muitos
 
@@ -70,7 +70,7 @@ Nele, consta:
 * Unidade de retirada do veículo (R8)
 * Unidade de devolução do veículo (R8)
 
-A coluna da Unidade de devolução do veículo poderá receber NULL, assim, se a o campo estiver NULL, é porque o veiculo ainda não foi devolvido. (R4)
+A coluna da Unidade de devolução do veículo poderá receber NULL, assim, se a o campo estiver NULL, é porque o veiculo ainda não foi devolvido. (R4)  
 A coluna para os quilômetros rodados poderá receber NULL, para que se armazene o cálculo da diferença da quilometragem após a locação. (R6)
 
 #### <font color="green">Relacionamentos Cardinais:</font>
@@ -135,7 +135,7 @@ Supondo que muitos dos clientes do Carloca podem ser turistas estrangeiros e com
 ### 🙋🗺️Tabela CLIENTE_ENDERECO
 
 Tabela intermediária para sanar a cardialidade entre as tabelas CLIENTE e ENDEREÇO.  
-Diante do exposto na tabela anterior (ENDERECO) sobre turistas estrangeiros em estadia temporária em hoteis, e observando que uma unidade do Carloca pode estar situada em uma região fronteiriça com outros países, compreende-se que há a cardialidade de N:N (Muitos para Muitos) entre as tabelas CLIENTE e ENDEREÇO, uma vez que vários clientes podem se hospedar no mesmo quarto de hotel.  
+Diante do exposto na tabela anterior (ENDERECO) sobre turistas estrangeiros em estadia temporária em hoteis, e observando que uma unidade do Carloca pode estar situada em uma região fronteiriça com outros países, compreende-se que há a cardialidade de N:N (Muitos para Muitos) entre as tabelas CLIENTE e ENDEREÇO, uma vez que vários clientes podem se hospedar no mesmo quarto de hotel ou morarem juntos.  
 
 Recebendo assim:
 * Identificador do cliente
@@ -212,7 +212,7 @@ Responsável pela categoria do veículo.
 Exemplos: Sedan, Caminhonete, SUV
 
 Portando:
-* Identificado
+* Identificador
 * Nome da versão
 
 #### <font color="green">Relacionamentos Cardinais:</font>
